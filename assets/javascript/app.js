@@ -21,10 +21,10 @@ var questions = [
     {
       question: 'Which female actor calls Jim Carrey her "Best male friend"?',
       answers: [
-        { answer: 'Nicole Kidman', value: true },
-        { answer: 'Katie Holmes', value: false },
-        { answer: 'Meryl Streep', value: false },
-        { answer: 'Charlize Theron', value: false }
+        { answer: 'A. Nicole Kidman', value: true },
+        { answer: 'B. Katie Holmes', value: false },
+        { answer: 'C. Meryl Streep', value: false },
+        { answer: 'D. Charlize Theron', value: false }
       ]
     },
     {
@@ -65,7 +65,7 @@ var questions = [
     }
   ];
   
-  // Global Variables
+  // "Global" Variables //
   var game;
   var counter = 0;
   var clock;
@@ -76,7 +76,7 @@ var questions = [
   
   $(document).ready(function() {
 
-    // Start Game //
+    // Start Game on CLICK//
     $('.answers').css('visibility', 'hidden');
     $('body').on('click', '#start', function(event) {
       event.preventDefault();
@@ -85,7 +85,7 @@ var questions = [
     });
   
     $('body').on('click', '.answer', function(event) {
-      // console.log($(this));
+      
       chosenAnswer = $(this).text();
       var answerCounter = questions[counter].answers;
   
