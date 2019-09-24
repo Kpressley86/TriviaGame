@@ -205,10 +205,9 @@ $(document).ready(function () {
     unansweredCounter = 0;
     timer = 20;
     startGame();
-    timerHolder();
   }
 
-  $('.reset-button').on('click', function (event) {
+  $(document).on('click', '.reset-button', function (event) {
     event.preventDefault();
     resetGame();
   });
